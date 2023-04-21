@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="style.css">
+      <title>Home</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+   </head>
+   <body>
+      
+      <header>
+         <div class="container container-nav">
+            <div class="site-title">
+               <h1>Team9</h1>
+               <p class="subtitle">One stop for all your Sensor Data
+               </p>
+            </div>
+            <nav>
+               <ul>
+                  <li><a href="" class="current-page">Home</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      
+      <!-- <!DOCTYPE html> -->
+<html>
+<head>
+	<title>Sensor Data</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js"></script>
+<script>
+var firebaseConfig = {
+   apiKey: "AIzaSyCIXCeEPJz0Qv5rCPmfSClUMs2IrCs0vfM",
+  authDomain: "redbus1-b9ebc.firebaseapp.com",
+  databaseURL: "https://redbus1-b9ebc-default-rtdb.firebaseio.com",
+  projectId: "redbus1-b9ebc",
+  storageBucket: "redbus1-b9ebc.appspot.com",
+  messagingSenderId: "603854574682",
+  appId: "1:603854574682:web:6c57e514089f0529c4b463",
+  measurementId: "G-BFMVZ19TZJ"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var database = firebase.database();
+
+// Read data from the database
+database.ref('Sensors.Gyrometer').once('value').then(function(snapshot) {
+  var data = snapshot.val();
+  x.innerhtml=data
+  // Do something with the data
+});
+
+</script>
+
+   
+	<header>
+		<h1>Sensor Data</h1>
+	</header>
+	<main>
+		<div class="sensor-container">
+			<h2>Accelerometer</h2>
+			<div class="sensor-data">
+				<div class="sensor-axis" id="xAxis">
+					<label>X-Axis:</label>
+                    <!-- rerfefe -->
+					<!-- <span id="xAxis"></span> -->
+                    dddd
+
+				</div>
+				<div class="sensor-axis">
+					<label>Y-Axis:</label>
+					<span id="yAxis"></span>
+				</div>
+				<div class="sensor-axis">
+					<label>Z-Axis:</label>
+					<span id="zAxis"></span>
+				</div>
+			</div>
+		</div>
+		<div class="sensor-container">
+			<h2>Gyroscope</h2>
+			<div class="sensor-data">
+				<div class="sensor-axis">
+					<label>X-Axis:</label>
+					<span id="gyroX"></span>
+				</div>
+				<div class="sensor-axis">
+					<label>Y-Axis:</label>
+					<span id="gyroY"></span>
+				</div>
+				<div class="sensor-axis">
+					<label>Z-Axis:</label>
+					<span id="gyroZ"></span>
+				</div>
+			</div>
+		</div>
+		<div class="sensor-container">
+			<h2>Magnetometer</h2>
+			<div class="sensor-data">
+					<div class="sensor-axis">
+					<label>X-Axis:</label>
+					<span id="magX"></span>
+				</div>
+				<div class="sensor-axis">
+					<label>Y-Axis:</label>
+					<span id="magY"></span>
+				</div>
+				<div class="sensor-axis">
+					<label>Z-Axis:</label>
+					<span id="magZ"></span>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
+      
+      <footer>
+         <p><strong>Just Chilling in NMAMIT</strong></p>
+         <p>Copyright &copy; 2023</p>
+         <p>Made with <i class="fas fa-heart"></i> By Team9&trade;</p>
+      </footer>
+   </body>
+</html>
